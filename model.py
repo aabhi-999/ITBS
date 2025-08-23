@@ -4,16 +4,12 @@ from database import Base
 
 class Bus(Base):
     __tablename__ = "buses"
+
     id = Column(Integer, primary_key=True, index=True)
     bus_number = Column(String, unique=True, index=True)
-    source = Column(String)
-    destination = Column(String)
-    total_seats = Column(Integer)
-    route = Column(String)  # JSON/text of stops
-    departure_time = Column(DateTime)
-    arrival_time = Column(DateTime)
-
-    bookings = relationship("Booking", back_populates="bus")
+    source = Column(String, index=True)
+    destination = Column(String, index=True)
+    seats = Column(Integer)
 
 class Booking(Base):
     __tablename__ = "bookings"
