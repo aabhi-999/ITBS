@@ -1,14 +1,14 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from database import get_db
-from models import Tracking, Bus
+from database import get_dbclear
+from model import Tracking, Bus
 from datetime import datetime
 
 router = APIRouter()
 
 # Update bus location (Driver/Conductor app will call this API)
 @router.post("/update/")
-def update_location(bus_id: int, latitude: float, longitude: float, db: Session = Depends(get_db)):
+def update_location(bus_id: int, latitude: float, longitude: float, db: Session = Depends(get_dbclear)):
     bus = db.query(Bus).filter(Bus.id == bus_id).first()
     if not bus:
         raise HTTPException(status_code=404, detail="Bus not found")
@@ -21,7 +21,7 @@ def update_location(bus_id: int, latitude: float, longitude: float, db: Session 
 
 # Get latest location of a bus
 @router.get("/{bus_id}")
-def get_location(bus_id: int, db: Session = Depends(get_db)):
+def get_location(bus_id: int, db: Session = Depends(get_dbclear)):
     location = db.query(Tracking).filter(Tracking.bus_id == bus_id).order_by(Tracking.timestamp.desc()).first()
     if not location:
         raise HTTPException(status_code=404, detail="No tracking data found")
@@ -31,3 +31,4 @@ def get_location(bus_id: int, db: Session = Depends(get_db)):
         "longitude": location.longitude,
         "last_updated": location.timestamp
     }
+
