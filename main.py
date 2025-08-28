@@ -14,5 +14,6 @@ app.include_router(tracking.router, prefix="/tracking", tags=["Tracking"])
 @app.get("/")
 def root():
     return {"message": "Welcome to ITBS Web Application 🚍"}
-print("http://127.0.0.1:8000/docs")
 print("uvicorn main:app --reload")
+print("http://127.0.0.1:8000/docs")
+
