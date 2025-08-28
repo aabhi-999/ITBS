@@ -29,6 +29,6 @@ def get_location(bus_id: int, db: Session = Depends(get_dbclear)):
         "bus_id": bus_id,
         "latitude": location.latitude,
         "longitude": location.longitude,
-        "last_updated": location.timestamp
+        "last_updated": location.timestamps
     }
 
