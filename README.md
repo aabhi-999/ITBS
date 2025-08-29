@@ -29,7 +29,7 @@ offer real-time bus location updates to passengers. To include secure digital pa
 ticketing. To help transport authorities with data analytics for improved decision-making.
 
 4. Proposed System
-The ITBS will have:
+The ITBS will have
 Passenger App/Web Portal: For real-time bus tracking, ticket booking, and
 fare display. Driver App: Updating real-time GPS data and route assignments. Admin
 Dashboard: Buses monitoring, ridership pattern analysis, and report generation. Technologies
