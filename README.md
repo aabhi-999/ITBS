@@ -14,7 +14,7 @@ Keywords: Public Transport, Intelligent Transportation System, GPS Tracking, Dig
    
 Public transport has an important part to play in urban mobility, particularly in highly populated states such as
 Uttar Pradesh. The government bus systems, however, are slow in technological integration. While Indian train services have embraced digital platforms for booking and tracking, the state-run bus systems continue to use old manual practices. This creates inefficiency, inconvenience to passengers, and waste of government resources. The envisioned ITBS seeks to digitalize and streamline the current bus transport infrastructure through providing real-time tracking, fare computation, seat reservation, and route
-planning features available through a common platform.
+planning features available through a common platform. efficient method.
 
 2. Problem Statement
 The existing Uttar Pradesh government bus transport system has the following issues: No real-time
